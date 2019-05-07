@@ -34,6 +34,7 @@ public class MoreFragment extends LazyFragment {
         args.putBoolean(LazyFragment.INTENT_BOOLEAN_LAZYLOAD, isLazyLoad);
         MoreFragment fragment = new MoreFragment();
         fragment.setArguments(args);
+
         return fragment;
     }
     @Override
