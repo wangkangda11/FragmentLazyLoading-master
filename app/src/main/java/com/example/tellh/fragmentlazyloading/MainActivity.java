@@ -7,6 +7,8 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MotionEvent;
 
+import com.example.tellh.fragmentlazyloading.viewpager.NoScrollViewPager;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,7 +18,7 @@ import butterknife.InjectView;
 public class MainActivity extends AppCompatActivity {
 
     @InjectView(R.id.viewPager2)
-    ViewPager viewPager;
+    NoScrollViewPager viewPager;
     private List<Fragment> fragmentList;
 
     @Override
@@ -32,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
         FragmentManager supportFragmentManager = getSupportFragmentManager();
         MyFragmentPagerAdapter myFragmentPagerAdapter = new MyFragmentPagerAdapter(supportFragmentManager, fragmentList);
         viewPager.setAdapter(myFragmentPagerAdapter);
+//        viewPager.setNoScroll(true);//setNoScroll  设置为ture禁止滑动
 
         viewPager.setOffscreenPageLimit(4);
     }

@@ -4,7 +4,7 @@ import android.content.Context;
 import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
-//z禁止viewpager左右滑动
+//z禁止viewpager左右滑动  //setNoScroll  设置为ture禁止滑动
 
 public class NoScrollViewPager extends ViewPager {
     private boolean noScroll = false;
